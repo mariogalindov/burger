@@ -1,1 +1,35 @@
-<h1>Connection made!</h1>
+<div class="container">
+    <div class="row" id="titleRow">
+        <div class="col-xs-12">
+            <h1 class="text-center">Eat da Yummie Burger!</h1>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6" id="nonDevoured">
+            <h2>Burgers ready to be devoured</h2>
+            {{#each data}}
+                {{#unless this.devoured}}
+                    {{!-- <p>{{this.id}}. {{this.burger_name}}</p>
+                    <button class="devourer btn-success" data-id="{{id}}">Devour it!</button> --}}
+                    {{> burgers/burger-block}}
+                {{/unless}}
+            {{/each}}   
+        </div>
+        <div class="col-xs-6" id="devoured">
+            <h2>Already devoured burgers</h2>
+            {{#each data}}
+                {{#if this.devoured}}
+                    <p>{{this.id}}. {{this.burger_name}}</p>
+                {{/if}}
+            {{/each}}
+        </div>
+        
+    </div>
+        
+
+
+</div>
+
+
+
