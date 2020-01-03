@@ -12,7 +12,7 @@
                 {{#unless this.devoured}}
                     {{!-- <p>{{this.id}}. {{this.burger_name}}</p>
                     <button class="devourer btn-success" data-id="{{id}}">Devour it!</button> --}}
-                    {{> burgers/burger-block}}
+                    {{> burgers/burger-block dev=true}}
                 {{/unless}}
             {{/each}}   
         </div>

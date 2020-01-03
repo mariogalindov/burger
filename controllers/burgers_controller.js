@@ -11,11 +11,11 @@ router.get("/", function(req, res) {
       console.log("This is the burger model data into the controller");
       console.log(data);
       var hbsObject = {
-        burger: data
+        burgers: data
       };
       // console.log(hbsObject);
       // res.render("index", hbsObject); No jala con el objeto hbsObject no sé si la sintaxis tenga que llevar los curly forzosamente si ya estaba definido como objeto en la var hbsObject
-      res.render("index", {data});
+      res.render("index", {data}); //{data}
     });
   });
 
@@ -23,12 +23,16 @@ router.get("/", function(req, res) {
     var condition = "id = " + req.params.id;
   
     console.log("condition", condition);
+    console.log("This is the req.body inside te put method of the controller")
   
-    cat.update({
+    burger.update({
       devoured: req.body.devoured
     }, condition, function(result) {
       if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404
+        console.log("This is devoured in the burger_controller");
+        console.log(devoured);
+        console.log("You changed nothing");
         return res.status(404).end();
       } else {
         res.status(200).end();
