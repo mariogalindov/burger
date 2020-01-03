@@ -19,6 +19,17 @@ router.get("/", function(req, res) {
     });
   });
 
+  router.post("/api/burgers", function(req, res) {
+    burger.create([
+      "burger_name", "devoured"
+    ], [
+      req.body.burger_name, req.body.devoured
+    ], function(result) {
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    });
+  });
+
   router.put("/api/burger/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
@@ -39,5 +50,7 @@ router.get("/", function(req, res) {
       }
     });
   });
+
+
 
 module.exports = router;
