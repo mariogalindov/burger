@@ -8,7 +8,6 @@ $(function() {
         }
 
         console.log(id);
-        alert("You clicked me");
         console.log(this);
 
 

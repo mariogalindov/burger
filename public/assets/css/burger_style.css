@@ -1,9 +1,48 @@
 .container {
-    background-color: red;
+    /* background-color: red; */
     text-align: center;
 }
 
 #titleRow {
-    color: royalblue;
+    color: #DB5461;
     text-align: center;
+}
+
+body {
+    background-color: #FFCF71;
+}
+
+h2 {
+    color: #4C5B5C;
+}
+
+#add {
+    color: #3891A6;
+}
+
+#burgersDisplay {
+    display: flow-root;
+}
+
+#nonDevoured {
+    float: left;
+}
+
+#devoured {
+    float: right;
+}
+
+.btn-success {
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 5px;
+    display: block;
+}
+
+#formDiv {
+    margin-top: 15px;
+    display: block;
 }
